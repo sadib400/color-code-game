@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Color Code — Guess the Pattern</title>
+<title>Guess the Color — Crack the Pattern</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.2/peerjs.min.js"></script>
 <style>
   :root {
@@ -34,13 +34,13 @@
   @keyframes bgshift { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } }
 
   h1 {
-    font-size: 2.2rem; letter-spacing: 1px;
+    font-size: 2.2rem; letter-spacing: 1px; text-align: center;
     background: linear-gradient(90deg, #ff7ab8, #6c7bff, #2dd4bf);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
   .palette-emoji { display: inline-block; animation: wiggle 2.4s ease-in-out infinite; }
   @keyframes wiggle { 0%,100% { transform: rotate(-8deg); } 50% { transform: rotate(10deg) scale(1.1); } }
-  .subtitle { color: var(--muted); margin-top: 6px; }
+  .subtitle { color: var(--muted); margin-top: 6px; text-align: center; padding: 0 16px; }
 
   .screen { width: 100%; max-width: 900px; display: none; flex-direction: column; align-items: center; }
   .screen.active { display: flex; animation: fadein 0.4s ease; }
@@ -286,6 +286,12 @@
     .board { padding: 14px; gap: 18px; }
     .board-wrap { gap: 6px; }
     .bottle-rack { padding: 8px 4px; }
+    .card { padding: 20px 14px; }
+    .player-row { gap: 6px; }
+    .player-row .tag { width: 26px; }
+    .player-row input { min-width: 0; width: 100%; }
+    .player-row .kind { min-width: 96px; padding: 10px 6px; font-size: 0.8rem; flex-shrink: 0; }
+    .join-row input.code { min-width: 0; }
   }
 </style>
 </head>
@@ -293,7 +299,7 @@
 
 <!-- ============ START SCREEN ============ -->
 <div class="screen active" id="screen-start">
-  <h1><span class="palette-emoji">🎨</span> Color Code</h1>
+  <h1><span class="palette-emoji">🎨</span> Guess the Color</h1>
   <p class="subtitle">Crack the hidden color pattern before your rivals do</p>
 
   <div class="card">

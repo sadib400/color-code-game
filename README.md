@@ -1,4 +1,4 @@
-# 🎨 Color Code — Guess the Pattern
+# 🎨 Guess the Color
 
 A fun multiplayer color-pattern guessing game. Crack the hidden bottle pattern before your rivals do!
 
